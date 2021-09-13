@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Faker::UniqueGenerator.clear
 puts '💻✌ Seeding..'
 
 Country.destroy_all
@@ -36,7 +36,6 @@ c8=City.create(name: Faker::Company.name, branch_name: Faker::Name.first_name, c
 c9=City.create(name: Faker::Company.name, branch_name: Faker::Name.first_name, country_id: cntry.sample)
 c10=City.create(name: Faker::Company.name, branch_name: Faker::Name.first_name, country_id: cntry.sample)
 c11=City.create(name: Faker::Company.name, branch_name: Faker::Name.first_name, country_id: cntry.sample)
-
 
 
 department1=Department.create(name: "BUILDING CONSTRUCTION", dept_manager_name: Faker::Name.name);
@@ -99,7 +98,7 @@ e35=Employee.create(name: Faker::Name.name,role: roles.sample, city_id: cities.s
 emp=[e1.id,e2.id,e3.id,e4.id,e5.id,e6.id,e7.id,e8.id,e9.id,e10.id,e11.id,e12.id,e13.id,e14.id,e15.id,e16.id,e17.id,
 e18.id,e19.id,e20.id,e21.id,e22.id,e23.id,e24.id,e25.id,e26.id,e27.id,e28.id,e29.id,e30.id,e31.id,e32.id,e33.id,e34.id,e35.id]
 
-10.times do
+100.times do
     ProjectEmployee.create(employee_id: emp.sample, project_id: all_projects.sample )
 end
 
