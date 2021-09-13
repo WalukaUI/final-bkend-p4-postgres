@@ -6,4 +6,6 @@ class Employee < ApplicationRecord
 
     validates :name, uniqueness: true
     validates :name, presence: true 
+    validates :department_id, presence: true 
+    validates :city_id, presence: true 
 end

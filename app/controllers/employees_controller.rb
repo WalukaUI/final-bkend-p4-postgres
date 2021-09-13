@@ -19,7 +19,7 @@ class EmployeesController < ApplicationController
      private
 
     def employee_params
-        params.permit(:name, :branch_name)
+        params.permit(:name, :section, :role, :department_id, :city_id)
       end
 
     def render_not_found
