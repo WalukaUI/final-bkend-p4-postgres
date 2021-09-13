@@ -4,17 +4,17 @@ class ProjectsController < ApplicationController
 
     def index
       project=Project.all
-      render json: project.to_json(except: [:created_at, :updated_at])
+      render json: project.to_json(except: [:created_at, :updated_at]), status: 200
     end
 
     def show
         project = Project.find(params[:id])
-        render json: project.to_json(except: [:created_at, :updated_at])
+        render json: project.to_json(except: [:created_at, :updated_at]), status: 200
       end
 
     def create
         project = Project.create(project_params)
-        render json: project.to_json(except: [:created_at, :updated_at])
+        render json: project.to_json(except: [:created_at, :updated_at]), status: 201
     end
      private
 
