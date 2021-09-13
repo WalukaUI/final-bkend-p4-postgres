@@ -1,5 +1,5 @@
 class City < ApplicationRecord
-    belongs_to :Country
+    belongs_to :country
     has_many :employees
 
     validates :name, uniqueness: true
