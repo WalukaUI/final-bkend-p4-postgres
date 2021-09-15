@@ -25,17 +25,17 @@ country5=Country.create!(name: "Japan");
 cntry=[country1,country2,country3,country4,country5]
 
 
-c1=City.create!(name: Faker::Company.name, branch_name: Faker::Name.first_name, country: cntry.sample)
-c2=City.create!(name: Faker::Company.name, branch_name: Faker::Name.first_name, country: cntry.sample)
-c3=City.create!(name: Faker::Company.name, branch_name: Faker::Name.first_name, country: cntry.sample)
-c4=City.create!(name: Faker::Company.name, branch_name: Faker::Name.first_name, country: cntry.sample)
-c5=City.create!(name: Faker::Company.name, branch_name: Faker::Name.first_name, country: cntry.sample)
-c6=City.create!(name: Faker::Company.name, branch_name: Faker::Name.first_name, country: cntry.sample)
-c7=City.create!(name: Faker::Company.name, branch_name: Faker::Name.first_name, country: cntry.sample)
-c8=City.create!(name: Faker::Company.name, branch_name: Faker::Name.first_name, country: cntry.sample)
-c9=City.create!(name: Faker::Company.name, branch_name: Faker::Name.first_name, country: cntry.sample)
-c10=City.create!(name: Faker::Company.name, branch_name: Faker::Name.first_name, country: cntry.sample)
-c11=City.create!(name: Faker::Company.name, branch_name: Faker::Name.first_name, country: cntry.sample)
+c1=City.create!(name: Faker::Name.first_name, branch_name: Faker::Company.name, country: cntry.sample)
+c2=City.create!(name: Faker::Name.first_name, branch_name: Faker::Company.name, country: cntry.sample)
+c3=City.create!(name: Faker::Name.first_name, branch_name: Faker::Company.name, country: cntry.sample)
+c4=City.create!(name: Faker::Name.first_name, branch_name: Faker::Company.name, country: cntry.sample)
+c5=City.create!(name: Faker::Name.first_name, branch_name: Faker::Company.name, country: cntry.sample)
+c6=City.create!(name: Faker::Name.first_name, branch_name: Faker::Company.name, country: cntry.sample)
+c7=City.create!(name: Faker::Name.first_name, branch_name: Faker::Company.name, country: cntry.sample)
+c8=City.create!(name: Faker::Name.first_name, branch_name: Faker::Company.name, country: cntry.sample)
+c9=City.create!(name: Faker::Name.first_name, branch_name: Faker::Company.name, country: cntry.sample)
+c10=City.create!(name: Faker::Name.first_name, branch_name: Faker::Company.name, country: cntry.sample)
+c11=City.create!(name: Faker::Name.first_name, branch_name: Faker::Company.name, country: cntry.sample)
 
 
 department1=Department.create!(name: "BUILDING CONSTRUCTION", dept_manager_name: Faker::Name.name);

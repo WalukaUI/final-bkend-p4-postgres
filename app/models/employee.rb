@@ -4,6 +4,7 @@ class Employee < ApplicationRecord
     belongs_to :department
     belongs_to :city
 
+
     validates :name, uniqueness: true
     validates :name, presence: true 
     validates :department_id, presence: true 

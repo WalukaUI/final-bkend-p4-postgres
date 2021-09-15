@@ -3,19 +3,37 @@ class EmployeesController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
     def index
-      employee=Employee.all
+      employee=Employee.all.order(department_id: :desc)
       render json: employee.to_json(except: [:created_at, :updated_at])
     end
 
     def show
         employee = Employee.find(params[:id])
-        render json: employee.to_json(except: [:created_at, :updated_at])
+        render json: employee, include: :city
       end
 
     def create
-        employee = Employee.create(employee_params)
-        render json: employee.to_json(except: [:created_at, :updated_at])
+        employee = Employee.create!(employee_params)
+        render json: employee.to_json(except: [:created_at, :updated_at]), status: :created
     end
+
+    def update
+      employee = Employee.find(params[:id])
+      employee.update!(employee_params)
+      render json: employee.to_json(except: [:created_at, :updated_at])
+    end
+
+    def destroy
+      employee = Employee.destroy(params[:id])
+      render json: {message: "Employee deleted"}
+    end
+
+    def projects_index
+      employee = Employee.find(params[:employee_id])
+      project = employee.projects
+      render json: project
+    end
+
      private
 
     def employee_params

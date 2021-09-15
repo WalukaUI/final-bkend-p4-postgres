@@ -9,7 +9,7 @@ class DepartmentsController < ApplicationController
 
     def show
         department = Department.find(params[:id])
-        render json: department.to_json(except: [:created_at, :updated_at])
+        render json: department, include: :employees, except: [:created_at, :updated_at]
       end
 
     def create
