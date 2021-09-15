@@ -9,7 +9,7 @@ class CountriesController < ApplicationController
 
     def show
         country = Country.find(params[:id])
-        render json: country.to_json(except: [:created_at, :updated_at])
+        render json: country.to_json(except: [:created_at, :updated_at], include: [cities: {except: [:created_at, :updated_at]}]) 
       end
 
     def create

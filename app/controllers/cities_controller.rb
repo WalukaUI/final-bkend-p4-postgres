@@ -9,7 +9,7 @@ class CitiesController < ApplicationController
 
     def show
         city = City.find(params[:id])
-        render json: city.to_json(except: [:created_at, :updated_at])
+        render json: city.to_json(except: [:created_at, :updated_at], include: [employees: { except: [:created_at, :updated_at]}])
       end
      private
 
