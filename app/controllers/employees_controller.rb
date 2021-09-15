@@ -3,7 +3,12 @@ class EmployeesController < ApplicationController
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity
 
     def index
-      employee=Employee.all.order(department_id: :desc)
+      if params[:project_id]
+        employee = Project.find(params[:project_id])
+        employee = employee.employees
+      else
+        employee =Employee.all
+      end
       render json: employee.to_json(except: [:created_at, :updated_at])
     end
 
