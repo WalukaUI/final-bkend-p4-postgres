@@ -14,7 +14,7 @@ class CitiesController < ApplicationController
      private
 
     def city_params
-        params.permit(:name, :branch_name, :country_id)
+        params.permit(:name, :branch_name, :country)
       end
 
     def render_not_found

@@ -1,23 +1,35 @@
 class UsersController < ApplicationController
-    skip_before_action :authorize, only: :create
+    # skip_before_action :authorize, only: :create
+    before_action :authorize, only: [:show]
 
-    def index
+      def index
        user=User.all
        render json: user
-    end
-    def create
-        user = User.create!(user_params)
+      end
+      def create
+      user = User.create(user_params)
+      if user.valid?
         session[:user_id] = user.id
         render json: user, status: :created
+      else
+        render json: { error: user.errors.full_messages }, status: :unprocessable_entity
       end
-    
+      end
+      def destroy
+        user = User.destroy(params[:id])
+        render json: {message: "User deleted"}
+      end
       def show
-        render json: @current_user
+        user = User.find_by(id: session[:user_id])
+        render json: user
       end
     
       private
-    
+      def authorize
+        return render json: { error: "Not authorized" }, status: :unauthorized unless session.include? :user_id
+      end
+
       def user_params
-        params.permit(:name, :password_digest, :password_confirmation, :position)
+        params.permit(:name, :password, :password_confirmation, :position)
       end
 end
