@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
     
       def destroy
         session.delete :user_id
+        render json: {message: "deleted"}
         head :no_content
       end
 end
