@@ -8,8 +8,8 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
     #origins 'https://localhost:3000'
-    
-    origins 'https://tnt-project-manager.netlify.app'
+    #origins 'https://tnt-project-manager.netlify.app'
+  origins 'https://localhost:3000'
 
     resource '*',
       headers: :any,
