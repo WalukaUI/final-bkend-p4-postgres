@@ -14,6 +14,7 @@ require "action_view/railtie"
 require "action_cable/engine"
 # require "sprockets/railtie"
 require "rails/test_unit/railtie"
+require "middleware/secure_cookies"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -39,7 +40,7 @@ module PM
     # Adding back cookies and session middleware
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore
-    
+    config.middleware.insert_after ActionDispatch::Static, Middleware::SecureCookies
     # Use SameSite=Strict for all cookies to help protect against CSRF
     #config.action_dispatch.cookies_same_site_protection = :strict
     
