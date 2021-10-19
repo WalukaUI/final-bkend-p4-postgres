@@ -8,11 +8,11 @@ Login Functionality
 
 ...Used...
 
-Cookies and Sessions
-Authentication
-Serializing
-Active record Validation
-Error handling
+* Cookies and Sessions
+* Authentication
+* Serializing
+* Active record Validation
+* Error handling
 
 ⬇   Table relationship   ⬇ 
 
