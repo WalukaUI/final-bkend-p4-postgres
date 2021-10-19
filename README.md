@@ -1,24 +1,19 @@
-# README
+*** Backend of TnT project manager app ****
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+URL = https://project-manager-bkend.herokuapp.com/cities
 
-Things you may want to cover:
+⭐___MVC___⭐
 
-* Ruby version
+Login Functionality
 
-* System dependencies
+...Used...
 
-* Configuration
+Cookies and Sessions
+Authentication
+Serializing
+Active record Validation
+Error handling
 
-* Database creation
+⬇   Table relationship   ⬇ 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Alt text](./mymodel.jpg?raw=true "Title")
