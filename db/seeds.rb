@@ -55,7 +55,7 @@ p9=Project.create!(name:"Wind power" ,client_name: Faker::Company.name,sector: "
 p10=Project.create!(name:"Havelock City phase II" ,client_name: Faker::Company.name,sector: "Highrise",cost: 210,start_date: 04052017, end_date: 01052021)
 
 cities=[c1.id,c2.id,c3.id,c4.id,c5.id,c6.id,c7.id,c8.id,c9.id,c10.id,c11.id]
-roles=["manager", "civil engineer", "Admin officer", "elecrical enginner", "supervisor","HR officer", "supervisor", "technical officer","technical officer"]
+roles=["manager", "civil engineer", "Admin officer", "elecrical enginner", "supervisor","HR officer", "supervisor", "technical officer"]
 all_projects=[p1.id,p2.id,p3.id,p4.id,p5.id,p6.id,p7.id,p8.id,p9.id,p10.id]
 dpt=[department1.id, department2.id,department3.id,department4.id]
 sections=["Audit", "Finance", "Security", "Transport", "HR", "Purchasing"]
