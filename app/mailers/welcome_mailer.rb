@@ -1,10 +1,9 @@
 class WelcomeMailer < ApplicationMailer
-    default from: 'cwaluka@gmail.com'
+    # default from: 'walukaweb@gmail.com'
 
-    def welcome_email
-      @user = params[:user]
+    def welcome_email(newuser)
+      @user = newuser
       @url  = 'http://example.com/login'
-      mail(to: "cwaluka@yahoo.com", subject: 'Welcome to My Awesome Site')
+      mail(to: @user.email, subject: 'Welcome to T&T Com.')
     end
 end
-# @user.email

@@ -19,7 +19,8 @@ require_relative "../lib/middleware/secure_cookies"
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-
+#require dot env package
+Dotenv::Railtie.load
 module PM
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
