@@ -7,7 +7,10 @@
     <h1>Welcome to T&T Inc, <%= @user.name %></h1>
     <p>
       You have successfully signed up to tnt-project-manager,
-      </br> your username is:  <%= @user.email %>.<br>
+      </br> your username is:  <%= @user.username %>.<br>
+
+      </br> Please verify your email address, 
+      </br>Your Verification number is <%=@vnumber%>
     </p>
     <p>
       To login to the site, just follow this link: <%= @url %>.
