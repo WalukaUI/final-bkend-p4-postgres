@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       def create
       user = User.create(user_params)
       if user.valid?
-        WelcomeMailer.welcome_email(user, params[:verificationnum]).deliver_later
+        WelcomeMailer.welcome_email(user).deliver_later
         session[:user_id] = user.id
         render json: user, status: :created
       else
@@ -32,6 +32,6 @@ class UsersController < ApplicationController
       end
 
       def user_params
-        params.permit(:name, :password, :password_confirmation, :username, :email, :verificationnum)
+        params.permit(:name, :password, :password_confirmation, :username, :email, :position)
       end
 end
