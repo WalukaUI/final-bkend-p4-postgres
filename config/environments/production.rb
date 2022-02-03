@@ -124,6 +124,6 @@ Rails.application.configure do
     open_timeout:         5,
     read_timeout:         5 }
 
-    config.action_mailer.default_url_options = { :host => "project-manager-bkend.herokuapp.com/" }
+    config.action_mailer.default_url_options = { :host => "project-manager-bkend.herokuapp.com" }
 
 end
