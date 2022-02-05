@@ -1,19 +1,27 @@
-*** Backend of TnT project manager app ****
+**\* Backend of TnT project manager app \*\***
 
 URL = https://project-manager-bkend.herokuapp.com/cities
 
-⭐___MVC___⭐
+⭐**_Tables_**⭐
 
-Login Functionality
+- cities
+- countries
+- departments
+- employees
+- project_employees
+- projects
+- users
 
-...Used...
+...Used technologies...
 
-* Cookies and Sessions
-* Authentication
-* Serializing
-* Active record Validation
-* Error handling
+- DB=PostgreSQL
+- Cookies and Sessions
+- Authentication
+- Serializing
+- Active record Validation
+- Error handling
+- Active Mailer
 
-⬇   Table relationship   ⬇ 
+⬇ Table relationship ⬇
 
 ![Alt text](./mymodel.jpg?raw=true "Title")
