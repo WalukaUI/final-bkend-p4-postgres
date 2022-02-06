@@ -24,11 +24,14 @@ class EmployeesController < ApplicationController
 
     def update
       employee = Employee.find(params[:id])
+      Mai
       employee.update!(employee_params)
       render json: employee.to_json(except: [:created_at, :updated_at])
     end
 
     def destroy
+      emp=Employee.find(params[:id])
+      DeleteEmployeeMailer.delete_employee(emp).deliver_later
       employee = Employee.destroy(params[:id])
       render json: {message: "Employee deleted"}
     end
