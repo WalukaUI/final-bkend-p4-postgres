@@ -30,8 +30,8 @@ class EmployeesController < ApplicationController
     end
 
     def destroy
-      emp=Employee.find(params[:id])
-      DeleteEmployeeMailer.delete_employee(emp).deliver_later
+      empl=Employee.find(params[:id])
+      DeleteEmployeeMailer.delete_employee(empl).deliver_now
       employee = Employee.destroy(params[:id])
       render json: {message: "Employee deleted"}
     end
